@@ -3,10 +3,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-		<title>Seed Sages</title>
-		<meta name="description" content="Seed Sages" />
-		<meta name="Author" content="Koby Hagen" />
-
+		<title>{{data.data.title}}</title>
+		<meta name="description" content="{{data.data.title}}" />
+		<meta name="Author" content="{{data.data.title}}" />
+    <meta name="Generator" content="CAPE.io v 2.1.x" />
 		<!--[if lt IE 9]>
 			<script type="text/javascript" src="assets/plugins/lt-ie9/html5.js"></script>
 			<script type="text/javascript" src="assets/plugins/lt-ie9/respond.min.js"></script>
@@ -115,28 +115,28 @@
 		<section id="about">
 			<div class="container">
 				<header class="text-center">
-					<h1>ABOUT</h1>
+					<h1>{{content.about.title}}</h1>
 				</header>
 
 				<div class="divider"><!-- lines divider --></div>
 
 				<article class="text-center big-paragraph">
-					<p>Seed Sages is an educational business that offers consulting, designing, training, and researching for organic seed production. Our mission is to re-skill our garden and farm communities in the art of seed saving and breeding to strengthen the foundation of our local food systems: our seed systems.</p>
+					{{content.about.content}}
 				</article>
         <article>
           <div class="row text-left">
 
             <!-- Passion -->
             <div class="col-md-6">
-              <h3>Seed</h3>
-              <p>For thousands of years our ancestors honed the ability to utilize wild and cultivated seeds. Due to farm mechanization and seed industry consolidation, we've become dependent on seeds from afar and lost seed growing skills. It is time to re-connect to and refine our stewardship with some of the most dormant yet life-giving beings on our earth: our seeds.</p>
+              <h3>{{content.seeds.title}}</h3>
+              {{content.seeds.content}}
             </div>
 
 
             <!-- Precision -->
             <div class="col-md-6">
-              <h3>Sage</h3>
-              <p>"SAGE" to become wise through experience. We offer various levels of training (basic to breeder) over the course of guided, experiential course/fieldwork. At the end of the time with us, we hope that each participant will know how to steward at least one plant type and graduate with the honors of a Seed Sage.</p>
+              <h3>{{content.sage.title}}</h3>
+              {{content.sage.content}}
             </div>
 
           </div>
@@ -146,7 +146,7 @@
 					<div class="item">
 						<img class="img-responsive" src="images/koby.jpg" width="200" height="200" alt="" />
 					</div>
-            <p><small>Koby Jeschkeit-Hagen, Founder and Instructor</small></p>
+            <p><small>{{content.koby.pic_blub}}</small></p>
 
           <hr />
 				</div>
@@ -166,15 +166,13 @@
 		<section id="work" class="alternate arrow-down">
 			<div class="container">
 				<header class="text-center">
-					<h1>MY WORK</h1>
+					<h1>{{content.koby.title}}</h1>
 				</header>
 
 				<div class="divider"><!-- lines divider --></div>
 
 				<article>
-					<p>
-						Teacher at Permaculture Research Institute Cold Climate, Track and Field Assistant Coach at Edina High School and Urban Farm Manager and Community Outreach Coordinator at Tiny Diner.
-					</p>
+					{content.koby.content}}
 				</article>
 
 			</div>
@@ -194,7 +192,7 @@
 
 				<article>
 					<p class="text-center big-paragraph">
-						Drop me a line or just say <strong>Hello!</strong>
+						{{{data.data.contact}}}
 						<small class="fsize15 block">
 						</small>
 					</p>
@@ -223,7 +221,7 @@
               </div>
 							<div class="col-md-12">
 								<input type="hidden" id="idstamp" name="idstamp" value="iCWP09EC167aF+cs826O4ZvbjPtM/O2XMJLvIIOwx1U=" />
-								<button id="saveForm" class="btn btn-default">SEND MESSAGE</button>
+								<button id="saveForm" class="btn btn-default">{{contact_button}}</button>
 							</div>
 						</div>
 					</form>
@@ -240,12 +238,11 @@
 		<section class="cover" style="background-image:url('images/creek.jpg')">
 			<span class="overlay"></span>
 			<div class="container text-center" data-animation="bounceIn">
-				<q>We can't solve problems by using the same kind of thinking we used when we created them.</q>
-				<cite>Albert Einstein</cite>
+				<q>{{data.data.quote}}</q>
+				<cite>{{data.data.quote_cite}}</cite>
 			</div>
 		</section>
 		<!-- /QUOTE -->
-
 
 
 
@@ -260,13 +257,13 @@
 				<div class="row">
 
 					<div class="col-md-6 copyright">
-						Seed Sages<br />
-						2014 &copy; All Rights Reserved.
+						{{data.data.footer}}<br />
+						2014 &copy; {{data.data.copyright}}
 					</div>
 
 					<div class="col-md-6 text-right">
-						<a href="https://www.facebook.com/seedsages" class="social fa fa-facebook"></a>
-						<a href="https://twitter.com/SeedSages" class="social fa fa-twitter"></a>
+						<a href="https://www.facebook.com/{{data.data.facebook}}" class="social fa fa-facebook"></a>
+						<a href="https://twitter.com/{{data.data.twitter}}" class="social fa fa-twitter"></a>
 					</div>
 
 				</div>
